@@ -23,9 +23,14 @@ const bubbleSort = (array) => {
       console.log(array, array[j], array[j + 1]);
 
       if (array[j] > array[j + 1]) {
+        const temp = array[j];
+        array[j] = array[j + 1];
+        array[j + 1] = temp;
       }
     }
   }
+
+  return array;
 };
 
 sortButton.addEventListener("click", sortInputArray);
